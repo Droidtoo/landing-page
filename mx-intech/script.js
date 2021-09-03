@@ -7,7 +7,6 @@
     $btnMenu.firstElementChild.classList.toggle("none");
     $btnMenu.lastElementChild.classList.toggle("none");
     $menu.classList.toggle("is-active");
-
     d.addEventListener("click", (e) => {
       if (!e.target.matches(".menu a")) return false;
       $btnMenu.firstElementChild.classList.remove("none");
@@ -52,5 +51,49 @@
           location.hash = "#close";
         }, 3000);
       });
+  });
+})(document);
+
+/**************************** DARK THEME ***************************/
+
+((d) => {
+  const $btnDark = d.querySelector(".btn-dark"),
+    $btnLight = d.querySelector(".btn-light"),
+    ls = localStorage,
+    $selectors = d.querySelectorAll("[data-dark]"),
+    $logo = d.querySelector(".logo"),
+    classDark = "dark-mode";
+
+  const lightMode = () => {
+    $logo.src = "./assets/Logo-color-transparente.png";
+    $btnLight.classList.add("none");
+    $btnDark.classList.remove("none");
+
+    $selectors.forEach((el) => el.classList.remove(classDark));
+
+    ls.setItem("theme", "light");
+  };
+  const darkMode = () => {
+    $logo.src = "./assets/Logo-color-negativo.png";
+    $btnDark.classList.add("none");
+    $btnLight.classList.remove("none");
+
+    $selectors.forEach((el) => el.classList.add(classDark));
+
+    ls.setItem("theme", "dark");
+  };
+
+  $btnDark.addEventListener("click", (e) => {
+    darkMode();
+  });
+
+  $btnLight.addEventListener("click", (e) => {
+    lightMode();
+  });
+
+  d.addEventListener("DOMContentLoaded", (e) => {
+    if (ls.getItem("theme") === null) ls.setItem("theme", "light");
+    if (ls.getItem("theme") === "light") lightMode();
+    if (ls.getItem("theme") === "dark") darkMode();
   });
 })(document);

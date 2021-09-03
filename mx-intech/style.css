@@ -1,23 +1,23 @@
 /********************** Custom Properties *******************/
 
 :root {
-  --first-color: rgb(242, 43, 178);
-  --first-alpha-color: rgba(242, 43, 178, 0.75);
-  --second-color: rgb(27, 63, 139);
-  --second-alpha-color: rgba(27, 63, 139, 0.75);
-  --third-color: rgb(52, 221, 46);
-  --third-alpha-color: rgba(52, 221, 46, 0.75);
+  --first-color: rgb(29, 66, 137);
+  --first-alpha-color: rgba(29, 66, 137, 0.8);
+  --second-color: rgb(239, 96, 121);
+  --second-alpha-color: rgba(239, 96, 121, 0.8);
+  --third-color: rgb(51, 63, 72);
+  --third-alpha-color: rgba(51, 63, 72, 0.8);
   --white-color: #fff;
   --gray-light-color: #f9f9f9;
   --gray-color: #d9dbe1;
   --gray-dark-color: #474a57;
   --black-color: #18191f;
-  --link-color: #2ec5ce;
-  --title-color: #333;
+  --link-color: #11cfe7;
+  --title-color: #314044;
   --text-color: #222;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
   --black-alpha-color: rgba(0, 0, 0, 0.5);
-  --font: "Raleway", sans-serif;
+  --font: "Roboto", sans-serif;
   --max-width: 1200px;
   --header-height: 4rem;
 }
@@ -49,32 +49,36 @@ a {
 }
 
 a:hover {
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 16px;
+  font-weight: medium;
 }
 
 h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 14px;
+  font-weight: medium;
 }
 
 h5 {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 12px;
 }
 
 h6 {
@@ -87,9 +91,12 @@ img {
   height: auto;
 }
 
-p {
+p,
+li {
   line-height: 1.6;
+  font-size: 14px;
 }
+
 /********************** Components *******************/
 
 /********************** Contact Form *******************/
@@ -140,6 +147,7 @@ p {
 
 .contact-form *::placeholder {
   color: var(--gray-dark-color);
+  padding-left: 0.5rem;
 }
 
 .contact-form-response {
@@ -181,6 +189,33 @@ p {
     margin-left: 0;
   }
 }
+
+/***************************Dark Second Alternativa****************************/
+
+.dark-svg {
+  padding: 0 1rem;
+}
+
+.btn-dark {
+  fill: var(--second-color);
+  transition: fill 0.5s ease-in-out;
+}
+
+.btn-dark:hover {
+  fill: var(--first-color);
+  cursor: pointer;
+}
+
+.btn-light {
+  fill: var(--second-color);
+  transition: fill 0.5s ease-in-out;
+}
+
+.btn-light:hover {
+  fill: var(--white-color);
+  cursor: pointer;
+}
+
 /********************** Hero Image *******************/
 .hero-image {
   background-image: var(--hero-image);
@@ -207,9 +242,9 @@ p {
 
 /********************** Menu *******************/
 .menu-btn {
-  outline: thin solid var(--first-color);
+  outline: thin solid var(--second-color);
   border: 0;
-  background-color: var(--second-color);
+  background-color: var(--white-color);
   cursor: pointer;
 }
 .menu {
@@ -217,12 +252,10 @@ p {
   left: 0;
   bottom: var(--header-height);
   width: 100%;
-  background-color: var(--second-color);
   display: flex;
   flex-flow: column nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5 ease;
 }
 
 .menu.is-active {
@@ -231,20 +264,22 @@ p {
 }
 
 .menu a {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.25rem;
   text-align: center;
   text-decoration: none;
   color: var(--first-color);
+  border-top: 0.4px solid var(--first-color);
+  transition: color 0.5s ease-in-out;
 }
 
 .menu a:hover {
-  color: var(--white-color);
-  background-color: var(--first-color);
+  color: var(--second-color);
+  font-weight: bold;
 }
 
 .menu-btn svg {
-  fill: var(--first-color);
+  fill: var(--second-color);
 }
 
 @media screen and (min-width: 1024px) {
@@ -264,10 +299,7 @@ p {
     padding: 0 1rem;
     font-size: 1rem;
     font-weight: bold;
-  }
-
-  .menu a:last-child {
-    padding-right: 0;
+    border: none;
   }
 
   .menu a:hover {
@@ -347,7 +379,7 @@ p {
   text-align: center;
   text-decoration: none;
   color: var(--white-color);
-  background-color: var(--first-color);
+  background-color: var(--second-color);
 }
 
 .container {
@@ -355,6 +387,11 @@ p {
   margin-right: auto;
   max-width: var(--max-width);
 }
+
+.espacio {
+  padding: 1rem;
+}
+
 .gray-scale {
   filter: grayscale(1);
   text-align: center;
@@ -368,7 +405,7 @@ p {
 }
 
 .section-title {
-  border-bottom: medium solid var(--third-color);
+  border-bottom: medium solid var(--second-color);
   width: 180px;
   margin: 2rem auto;
   padding: 0.5rem 0rem;
@@ -441,18 +478,6 @@ p {
   background-color: var(--third-color);
 }
 
-.frase-container {
-  padding-left: 0.25rem;
-}
-
-.frase {
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-feature-settings: "salt" on, "liga" off;
-  color: var(--white-color);
-}
 .header {
   position: fixed;
   bottom: 0;
@@ -460,8 +485,9 @@ p {
   padding: 0.5rem 1rem 0.5rem 1rem;
   z-index: 999;
   width: 100%;
+  background-color: var(--white-color);
   height: var(--header-height);
-  background-color: var(--second-color);
+  border-top: thin solid var(--first-color);
 }
 
 .header > .container {
@@ -469,14 +495,22 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
-  display: flex;
-  align-items: center;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  /*  background-image: url("./assets/Logo-color-transparente.png");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.logo-img {
-  height: 3rem;
+.menu-superior {
+  display: flex;
+  align-items: center;
+  align-content: centermenu;
 }
+
 .social-media {
   display: flex;
   flex-flow: row wrap;
@@ -487,7 +521,16 @@ p {
 
 .social-media svg {
   height: 1.5rem;
-  stroke-width: 1;
+  stroke-width: 2px;
+}
+
+.social-media svg path {
+  stroke: var(--first-color);
+}
+
+.svg-yt path,
+.svg-tw path {
+  stroke-width: 1px;
 }
 
 .social-media a {
@@ -567,6 +610,10 @@ p {
     justify-self: end;
     padding-right: 3rem;
   }
+  .header {
+    border-top: 0;
+    border-bottom: thin solid var(--first-color);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -584,7 +631,7 @@ p {
 
   .who-are {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 45%);
     justify-content: space-evenly;
     align-content: center;
   }
@@ -613,4 +660,68 @@ p {
     flex-direction: column;
     max-width: 300px;
   }
+}
+
+/******************************Dark Mode*********************************/
+
+body .dark-mode {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+.dark-mode a {
+  color: var(--white-color);
+}
+
+.dark-mode a:hover {
+  color: var(--second-color);
+}
+
+.dark-mode .section-title {
+  color: var(--white-color);
+  border-bottom: medium solid var(--white-color);
+}
+
+.dark-mode .bg-gray-light {
+  background-color: #202020;
+}
+
+.dark-mode .yt-video a {
+  color: var(--white-color);
+}
+
+.dark-mode .yt-video p {
+  color: var(--gray-color);
+}
+
+.dark-mode .box-shadow-2 {
+  box-shadow: 0px 1px 1px 1px var(--white-color);
+  border-radius: 1%;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  color: var(--white-color);
+  border: thin solid white;
+  background-color: #333f48;
+}
+
+.dark-mode .contact-form {
+  background-color: #202020;
+}
+
+.dark-mode .contact-form *::placeholder {
+  color: var(--gray-color);
+}
+
+.dark-mode .contact-card {
+  background-color: #202020;
+}
+
+.dark-mode .social-media {
+  background-color: #202020;
+}
+
+.dark-mode a svg path {
+  stroke: white;
 }
