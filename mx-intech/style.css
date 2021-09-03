@@ -256,6 +256,7 @@ li {
   flex-flow: column nowrap;
   opacity: 0;
   pointer-events: none;
+  background-color: var(--white-color);
 }
 
 .menu.is-active {
@@ -668,9 +669,13 @@ body .dark-mode {
   background-color: var(--first-color);
   color: var(--white-color);
 }
+.dark-mode header {
+  border-top: 0.4px solid var(--white-color);
+}
 
 .dark-mode a {
   color: var(--white-color);
+  border-top: 0.4px solid var(--white-color);
 }
 
 .dark-mode a:hover {
@@ -724,4 +729,18 @@ body .dark-mode {
 
 .dark-mode a svg path {
   stroke: white;
+}
+
+@media screen and (min-width: 768px) {
+  .dark-mode header {
+    border-top: none;
+    border-bottom: 0.4px solid var(--white-color);
+  }
+
+  .dark-mode a {
+    border-top: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
 }

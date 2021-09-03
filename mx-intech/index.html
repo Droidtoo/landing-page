@@ -55,82 +55,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header" data-dark>
-      <section class="container">
-        <img
-          class="logo"
-          src="./assets/Logo-color-transparente.png"
-          alt="Mexico In Tech"
-        />
-        <div class="menu-superior" data-dark>
-          <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#quienes-somos">Quienes Somos</a>
-            <a href="#webinar">Webinar</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
+    <div class="header-dark-mode" data-dark>
+      <header class="header" data-dark>
+        <section class="container">
+          <img
+            class="logo"
+            src="./assets/Logo-color-transparente.png"
+            alt="Mexico In Tech"
+          />
+          <div class="menu-superior">
+            <nav class="menu" data-dark>
+              <a href="#inicio">Inicio</a>
+              <a href="#quienes-somos">Quienes Somos</a>
+              <a href="#webinar">Webinar</a>
+              <a href="#contacto">Contacto</a>
+            </nav>
 
-          <div class="dark-svg">
-            <svg
-              class="btn-light none"
-              fill="currentColor"
-              width="28"
-              height="28"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <title>Light Mode</title>
-              <path
+            <div class="dark-svg">
+              <svg
+                class="btn-light none"
+                fill="currentColor"
+                width="28"
+                height="28"
                 xmlns="http://www.w3.org/2000/svg"
-                fill-rule="evenodd"
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+                viewBox="0 0 20 20"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <title>Light Mode</title>
+                <path
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
 
-            <svg
-              class="btn-dark"
-              fill="currentColor"
-              width="28"
-              height="28"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <title>Dark Mode</title>
-              <path
+              <svg
+                class="btn-dark"
+                fill="currentColor"
+                width="28"
+                height="28"
                 xmlns="http://www.w3.org/2000/svg"
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
-            </svg>
+                viewBox="0 0 20 20"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <title>Dark Mode</title>
+                <path
+                  xmlns="http://www.w3.org/2000/svg"
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </div>
+
+            <button class="menu-btn" data-dark>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+              </svg>
+              <svg
+                class="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
+                />
+              </svg>
+            </button>
           </div>
-
-          <button class="menu-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
-            </svg>
-            <svg
-              class="none"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
-              />
-            </svg>
-          </button>
-        </div>
-      </section>
-    </header>
-
+        </section>
+      </header>
+    </div>
     <section id="inicio" class="home">
       <article
         class="hero-image"
