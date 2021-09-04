@@ -479,6 +479,7 @@ li {
   background-color: var(--third-color);
 }
 
+.header-dark-mode,
 .header {
   position: fixed;
   bottom: 0;
@@ -611,6 +612,7 @@ li {
     justify-self: end;
     padding-right: 3rem;
   }
+
   .header {
     border-top: 0;
     border-bottom: thin solid var(--first-color);
@@ -625,6 +627,7 @@ li {
   .footer {
     margin-bottom: 0;
   }
+
   .header {
     position: sticky;
     top: 0;
