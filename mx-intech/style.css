@@ -522,8 +522,8 @@ li {
 }
 
 .social-media svg {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   stroke-width: 2px;
 }
 
@@ -618,6 +618,11 @@ li {
   .header {
     border-top: 0;
     border-bottom: thin solid var(--first-color);
+  }
+
+  .social-media svg {
+    width: 4rem;
+    height: 4rem;
   }
 }
 
