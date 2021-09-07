@@ -740,12 +740,12 @@ body .dark-mode {
   stroke: white;
 }
 
-body > .dark-mode {
-  border: 5x solid var(--white-color);
+.header.dark-mode {
+  border-top: thin solid var(--white-color);
 }
 
 @media screen and (min-width: 768px) {
-  body > .dark-mode {
+  .header.dark-mode {
     border-top: none;
     border-bottom: 0.4px solid var(--white-color);
   }
